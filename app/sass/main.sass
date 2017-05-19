@@ -1,0 +1,611 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+ul, p, h1, h3
+	padding: 0
+	margin: 0
+	list-style: none
+a
+	color: $default-color
+	&:hover
+		text-decoration: none
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+fieldset
+	padding: 20px 25px 35px 25px
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.row
+	max-width: 1200px
+	min-width: 320px
+	padding: 0 10px
+	margin: 0 auto
+
+.header-top
+	background: $header-bg-color
+	width: 100%
+	.row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+.top-navigation
+	.nav-list
+		list-style: none
+		display: flex
+		li
+			a
+				color: #6d757e
+				padding: 10px 13px
+				display: block
+				width: 100%
+				height: 100%
+				&:hover
+					background: #d4dde3
+		.active
+			background: #d4dde3
+			a
+				text-decoration: underline
+
+.top-social
+	display: flex
+	.fb, .tw, .gl
+		background: url(../img/sprite-top-header.png) no-repeat -4px -32px
+		width: 30px
+		&:hover
+			background: url(../img/top-hover.png) no-repeat -2px 7px
+			transition: .4s
+	.tw
+		background: url(../img/sprite-top-header.png) no-repeat -42px 5px
+		&:hover
+			background: url(../img/top-hover.png) no-repeat -2px -31px
+			transition: .4s
+	.gl
+		background: url(../img/sprite-top-header.png) no-repeat -4px 6px
+		&:hover
+			background: url(../img/top-hover.png) no-repeat -40px 7px
+			transition: .4s
+
+.top-lang
+	display: flex
+	.en, .kz, .ru
+		background: url(../img/sprite-top-header.png) no-repeat -100px -36px
+		width: 40px
+	.kz
+		background: url(../img/sprite-top-header.png) no-repeat -46px -32px
+	.ru
+		background: url(../img/sprite-top-header.png) no-repeat -94px 6px
+
+
+.header-sub
+	background: #fff
+	.row
+		display: flex
+		justify-content: space-between
+		padding: 8px 0
+		
+		.sub-logo
+			flex-basis: 21%
+	.sub-info
+		display: flex
+		flex-direction: column
+		flex-basis: 53%
+		.info-top
+			display: flex
+			font-size: .875em
+			font-family: $light
+			.mail
+				display: flex
+				align-items: center
+				margin-right: 20px
+
+				&:before
+					content: ''
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 5px
+					background: url(../img/sprite-sub-header.png) no-repeat -79px -33px
+			p
+				display: flex
+				align-items: flex-end    			
+				&:before
+					content: ''
+					display: inline-block
+					width: 14px
+					margin-right: 5px
+					height: 24px
+					background: url(../img/sprite-sub-header.png) no-repeat -78px -6px
+.info-sub
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.info-phone
+		p
+			font: 2.25em $light		
+	.info-phone-social
+		background: $social-bg
+		border: 1px solid #feefaa
+		border-radius: 3px
+		max-width: 290px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 5px
+		.vb, .wp, .tm, .icq
+			display: flex
+			align-items: center
+			font-family: $bold
+			font-size: .8em
+			width: 130px
+
+			&:before
+				content: ''
+				display: flex
+				align-items: center
+				width: 30px
+				height: 30px
+				margin-right: 9px
+				background: url(../img/sprite-sub-header.png) no-repeat 1px 0px
+		.wp
+			&:before
+				background: url(../img/sprite-sub-header.png) no-repeat 0px -36px
+		.tm
+			&:before
+				background: url(../img/sprite-sub-header.png) no-repeat -36px 0px
+		.icq
+			&:before
+				background: url(../img/sprite-sub-header.png) no-repeat -36px -36px
+
+.sub-acount
+	flex-basis: 25.3%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	text-align: center
+	.acount-top
+		display: flex
+		justify-content: center
+		text-align: center
+		.acount-enter, .acount-reg, 
+			width: 129px
+			padding: 5px 13px
+			border-right: 2px solid rgba(0, 0, 0, 0.15)
+			border-bottom: 2px solid rgba(0, 0, 0, 0.15)
+			font-size: .75em
+			background: $button-color-gr
+			border-radius: 3px
+			color: #fff
+			cursor: pointer
+			&:hover
+				box-shadow: 0 0 10px $default-color
+				transition: .5s
+		.acount-reg
+			background: $button-color-bl
+			margin-left: 5px
+
+	.acount-sub
+		font-family: $light
+		margin-top: 10px
+		a
+			border-bottom: 1px solid
+
+.content
+	background: url(../img/bg-content.png) no-repeat
+	background-size: cover
+	padding: 40px 0
+
+
+.content-general-inner
+	.title-general
+		font-family: $light
+		color: rgb(76, 88, 103)
+		font-size: 14px
+		h1
+			font-weight: 100
+			font-size: 2.43em
+		ul
+			line-height: 1.5
+			margin-bottom: 12px
+
+.general-exchange
+	background-color: $exchange-bg
+	box-shadow: 0px 3px 0px 0px rgba(98, 112, 128, 0.08)
+	border: 1px solid $exchange-border
+	max-width: 640px
+	input
+		width: 205px
+		outline: none
+		&:focus
+			box-shadow: inset 0 0 10px $button-color-gr
+			transition: 1s
+	.fieldset-container, input, button
+		border: 0
+		background: transparent
+		label
+			font-family: $medium
+		.form-item-get, .form-item-give
+			display: flex
+			border: 2px solid #b1b7c9
+			background: #fff
+			border-radius: 3px
+			width: 315px
+			height: 40px
+
+.form-item-get
+	.item-button
+		button
+			display: flex
+			i
+				width: 36px
+				height: 34px
+				background: url(../img/sprite-content.png) -72px -5px
+
+.form-item-give
+	.item-button
+		button
+			display: flex
+			i
+				width: 36px
+				height: 34px
+				background: url(../img/sprite-content.png) -72px -47px
+
+.form-item-get, .form-item-give
+	span
+		&:after
+			content: ''
+			display: inline-block
+			width: 20px
+			height: 20px
+			background: url(../img/sprite-content.png) no-repeat -107px -15px
+
+.form-label-give
+	display: flex
+	justify-content: space-between
+	.item-give-text
+		line-height: 1.3
+		a
+			color: $button-color-gr
+			text-decoration: underline
+			font-family: $bold
+			&:before
+				content: ''
+				display: inline-block
+				width: 20px
+				height: 20px
+				background: url(../img/sprite-content.png) no-repeat -105px 5px
+
+.form-submit
+	margin-top: 35px
+	a
+		display: block
+		padding: 7px 13px
+		width: 100%
+		min-width: 128px;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.15)
+		border-right: 2px solid rgba(0, 0, 0, 0.15)
+		background: $button-color-gr
+		text-align: center
+		border-radius: 4px
+		color: #fff
+		font-family: $medium
+		&:hover
+			box-shadow: 0 0 10px #000
+			transition: 1s
+		span
+			font-size: 1.3em
+			&:before
+				content: ''
+				display: inline-block
+				width: 30px
+				height: 30px
+				background: url(../img/sprite-content.png) no-repeat -6px -89px
+				vertical-align: middle
+
+.sidebar
+	padding-left: 73px
+	.sidebar-item-first, .sidebar-item-second
+		border: 1px solid #d2dae1
+		background: rgba(255, 255, 255, 0.89)
+		box-shadow: 0px 3px 0px 0px rgba(98, 112, 128, 0.08)
+		padding: 10px
+		width: 290px
+		display: flex
+		i
+			width: 100px
+			height: 65px
+			background: url(../img/sprite-content.png) no-repeat -136px -5px
+		.item-first__text
+			display: flex
+			flex-direction: column
+			line-height: 1.5
+			.time
+				font-family: $medium
+				font-size: 12px
+				text-decoration: underline
+			.online
+				font-family: $light
+				font-size: 18px
+			.write
+				color: $link-color
+				font-size: 14px
+				&:before
+					content: ''
+					display: inline-block
+					width: 20px
+					height: 25px
+					background: url(../img/sprite-sub-header.png) no-repeat -79px -33px
+					vertical-align: middle
+					margin-right: 7px
+
+.sidebar
+	.sidebar-item-second
+		margin-top: 35px
+		display: flex
+		flex-direction: column
+		align-items: center
+		.item-second__title
+			display: flex
+			i
+				width: 86px
+				height: 64px
+				background: url(../img/sprite-content.png) no-repeat 1px 1px
+				margin-right: 10px
+			p
+				font-family: $light
+				font-size: 24px
+				line-height: 1
+				padding: 0
+				span
+					font-family: $medium
+					font-size: 14px
+		.item-second__btn
+			width: 100%
+			text-align: center
+			margin: 8px 0
+			background: $button-color-bl
+			padding: 5px 13px
+			border-radius: 4px
+			border-bottom: 2px solid rgba(0, 0, 0, 0.15)
+			&:hover
+				box-shadow: 0 0 10px $default-color
+				transition: .5s
+				color: $default-color
+			a
+				color: #fff
+				display: block
+				span
+					&:before
+						content: ''
+						width: 30px
+						height: 20px
+						background: url(../img/sprite-content.png) no-repeat -101px -34px
+						display: inline-block
+		p
+			text-align: center
+			font-family: $bold
+			font-size: 14px
+			padding: 0 42px
+
+
+
+.sidebar
+	.sidebar-item-third
+		margin-top: 10px
+		.item-third__title
+			text-decoration: underline
+			font-size: 24px
+			margin-bottom: 20px
+		.item-third__date
+			color: $link-color
+			font-size: 12px
+			font-style: italic
+			margin-bottom: 20px
+		.exchange-system
+			display: flex
+			a
+				font-family: medium
+			.system-first, .system-second
+				i
+					display: inline-block
+					content: ''
+					vertical-align: middle
+					width: 35px
+					height: 38px
+					background: url(../img/sprite-content.png) no-repeat -33px -87px
+
+
+			.system-second
+				i
+					background: url(../img/sprite-content.png) no-repeat -69px -86px
+
+.system-first
+	span
+		&:after
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			background: url(../img/icon-arow.png) no-repeat
+			margin-left: 5px			
+
+.top-hidden
+	display: none
+	order: 0
+	font-family: $medium
+	font-size: 12px
+	p
+		&:before
+			display: inline-block
+			content: ''
+			width: 20px
+			height: 23px
+			background: url(../img/sprite-sub-header.png) no-repeat -78px -6px
+			vertical-align: middle
+
+
+.item-tablet-hide
+	display: none
+	background: $tablet-bg
+	padding: 8px 10px
+	border: 1px solid rgb(254, 239, 170)
+	border-radius: 5px
+	flex-direction: column
+	width: 260px
+	line-height: 1.1
+
+	.top-tablet, .sub-tablet
+		display: flex
+		justify-content: space-between
+		i
+			width: 50px
+			height: 50px
+			background: url(../img/tablet-icon.png) no-repeat 1px 1px
+	.top-tablet
+		.top-tablet-text
+			span
+				color: rgb(52, 139, 25)
+				font-family: $bold
+				font-size: 14px
+				text-decoration: underline
+			p
+				span
+					font-family: $default-font
+					text-decoration: none
+					font-size: 12px
+					color: $default-color
+				.tablet__link
+					+tablet__link
+	.sub-tablet
+		justify-content: flex-start
+		i
+			background: url(../img/tablet-icon.png) no-repeat -41px -26px
+		.sub-tablet-text
+			p
+				font-family: $medium
+				font-size: 1.1em
+			.tablet__link
+				+tablet__link
+				margin-left: 0
+
+.btn-menu
+	display: none
+	width: 30px
+	height: 30px
+	background: url(../img/tablet-icon.png) no-repeat -47px 1px
+	position: fixed
+	top: 8px
+	left: 17px
+	z-index: 100
+
+.hidden-menu
+	display: none
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 99
+	background: rgba(0, 0, 0, .7)
+	.menu-inner
+		.menu-list
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 100px 0 0
+			li
+				margin-bottom: 20px
+				width: 100%
+				text-align: center
+				a
+					color: #fff
+					font-size: 24px
+					text-transform: uppercase
+					display: block
+					&:hover
+						background: rgba(254, 0, 0, .5)
+						transition: .5s
+
+.hidden-item
+	display: none
+	width: 54%
+	text-align: right
+	font-family: $bold
+	text-decoration: underline
+	color: #4c5867
+	&:after
+		display: inline-block
+		content: ''
+		vertical-align: middle
+		height: 5px
+		width: 20px
+		background: url(../img/arrow-mobile.png) no-repeat
+		margin-left: 5px
+
+
+.hidden-social
+	display: none
+	.social-mobile
+		display: flex
+		justify-content: center
+		.vb, .wp, .tm, .icq
+			width: 30px
+			height: 30px
+			margin-right: 9px
+			background: url(../img/sprite-sub-header.png) no-repeat 1px 0px
+		.wp
+			background: url(../img/sprite-sub-header.png) no-repeat 0px -36px
+		.tm
+			background: url(../img/sprite-sub-header.png) no-repeat -36px 0px
+		.icq
+			background: url(../img/sprite-sub-header.png) no-repeat -36px -36px
+	.info-phone
+		p
+			font: 2.25em "roboto-light", sans-serif
+
+.title-general
+	h3
+		display: none
+		font-family: $medium
+		text-decoration: underline
+		text-align: center
+		font-size: 24px
+
+
+
+@import "media" // Всегда в конце

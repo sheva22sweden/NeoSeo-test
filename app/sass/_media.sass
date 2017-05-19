@@ -1,0 +1,139 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1082px)
+	.header-top 
+		.row
+			align-items: center
+	.header-sub 
+		.row	
+			.sub-info
+				display: none
+	.item-tablet-hide, .top-hidden
+		display: block
+	.top-navigation
+		order: 3
+		flex-basis: 100%
+		.nav-list
+			justify-content: space-between
+	.top-social
+		height: 40px
+		order: 1
+	.top-lang
+		height: 40px
+		order: 2
+	.sidebar
+		display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 840px)
+	.top-navigation 
+		.nav-list
+			justify-content: center
+			li 
+				a
+					padding: 10px 7px
+					font-size: 14px
+	.top-lang, .top-social
+		height: 45px
+	.sub-acount 
+		.acount-top
+			flex-direction: column
+			align-items: center
+			.acount-reg
+				margin: 10px 0 0
+	.content-general-inner 
+		.title-general 
+			ul
+				display: none
+
+	.content-general-inner 
+		.title-general 
+			h1
+				text-align: center
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 690px)
+	.top-navigation, 
+	.top-hidden, 
+	.top-social, 
+	.sub-acount,
+	.item-tablet-hide,
+	h1
+		display: none
+	.header-sub 
+		.row
+			flex-direction: column
+	.btn-menu, 
+	.hidden-social, 
+	.hidden-item,
+		display: block
+	.content
+		background: $header-bg-color
+		padding: 20px 0
+	.general-exchange
+		background: transparent
+		border: 0
+		input
+			width: 76%
+		.fieldset-container
+			padding: 20px 0px 35px 0px
+			.form-item-get
+				width: 100%
+			.form-label-give
+				.form-item-give
+					width: 100%
+			.form-label-give
+				flex-direction: column
+	.item-give-text
+		text-align: center
+		margin-top: 10px
+		a
+			display: none
+	.title-general
+		h3
+			display: block
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 525px)
+	.general-exchange
+		input
+			width: 60%
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.hidden-item
+		width: 60%
+		font-size: 12px
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
